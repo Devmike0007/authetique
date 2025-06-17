@@ -1,0 +1,292 @@
+body {
+    background-color: var(--noir); /* reste noir pur */
+    color: var(--blanc);
+    line-height: 1.6;
+}
+
+/* Exemples de modifications pour différencier */
+.Bannier
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--noir);
+    color: var(--blanc);
+    line-height: 1.6;
+}
+
+main {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, var(--rouge-foncé), var(--rouge));
+    padding: 20px 60px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    height: 90px;
+}
+
+.logo img {
+    height: 100%;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+ul a {
+    color: var(--blanc);
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+ul a::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: var(--blanc);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+ul a:hover {
+    color: var(--noir);
+    text-shadow: 0 0 5px var(--blanc);
+}
+
+ul a:hover::after {
+    width: 100%;
+}
+
+/* BANNIERE */
+.Bannier {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: var(--rouge-foncé);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+    align-items: center;
+}
+
+.Bannier .images {
+    width: 500px;
+    height: 400px;
+    background-color: var(--noir);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.Bannier .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.Bannier .images:hover img {
+    transform: scale(1.05);
+}
+
+.Bannier .texte {
+    flex: 1;
+    color: var(--blanc);
+    font-size: 20px;
+    padding: 20px;
+    animation: fadeIn 1.2s ease;
+}
+
+/* MARQUE */
+.Marque {
+    width: 100%;
+}
+
+.Marque .conteneur {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.carte_article {
+    height: 400px;
+    width: 300px;
+    background-color: var(--gris-foncé);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+    transition: transform 0.4s ease;
+}
+
+.carte_article:hover {
+    transform: scale(1.05);
+}
+
+.carte_article .image {
+    height: 50%;
+    background-color: var(--blanc);
+}
+
+.carte_article .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carte_article .texte {
+    height: 50%;
+    background-color: var(--rouge);
+    color: var(--blanc);
+    padding: 15px;
+}
+
+/* MISSION */
+.Mission {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.Mission .image {
+    height: 400px;
+    width: 400px;
+    background-color: var(--noir);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.Mission .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Mission .texte {
+    background-color: var(--rouge);
+    height: 400px;
+    width: 600px;
+    color: var(--blanc);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* ADRESSE CONTACT */
+.addresse_contacte {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.addresse_contacte .carte,
+.addresse_contacte .formulaire {
+    width: 100%;
+    max-width: 600px;
+    height: 700px;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.addresse_contacte .carte {
+    background-color: var(--gris-foncé);
+}
+
+.addresse_contacte .formulaire {
+    background-color: var(--rouge);
+    color: var(--blanc);
+}
+
+/* FOOTER */
+footer {
+    height: 300px;
+    background-color: var(--noir);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanc);
+    font-size: 18px;
+    border-top: 3px solid var(--rouge);
+}
+
+/* BOUTON */
+.btn-red {
+    background-color: var(--rouge);
+    color: var(--blanc);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-red:hover {
+    background-color: var(--noir);
+    color: var(--rouge);
+    border: 1px solid var(--rouge);
+}
+
+/* ANIMATIONS */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .Bannier, .Mission, .addresse_contacte {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Bannier .images, .Mission .image, .Mission .texte,
+    .addresse_contacte .carte, .addresse_contacte .formulaire {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
